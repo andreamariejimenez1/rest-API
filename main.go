@@ -43,7 +43,7 @@ func getNetwork(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(&Network{})
 }
 
-//Create a new book
+//Create a new network
 func createNetwork(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	var network Network // create a variable "network" and set it to Network struct
@@ -52,7 +52,7 @@ func createNetwork(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(network)   // giving us a response
 }
 
-//Update a book
+//Update a network
 func updateNetwork(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	params := mux.Vars(r)
